@@ -1,0 +1,31 @@
+{
+  "name": "aave-flashloan-liquidator",
+  "version": "0.1.0",
+  "description": "Flash-loan liquidation keeper for Aave v3 (liquidations only — no sandwich/counterparty-targeting strategies)",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "scan-once": "tsx src/index.ts --once",
+    "typecheck": "tsc --noEmit",
+    "simulate": "tsx scripts/simulate-example.ts",
+    "new-wallet": "tsx scripts/new-wallet.ts",
+    "compile": "tsx scripts/deploy.ts --compile-only",
+    "deploy": "tsx scripts/deploy.ts",
+    "sweep": "tsx scripts/sweep.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pino": "^9.4.0",
+    "viem": "^2.21.44"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "pino-pretty": "^11.3.0",
+    "solc": "0.8.26",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
